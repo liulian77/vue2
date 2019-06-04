@@ -1,0 +1,43 @@
+ @import "./common/index"; 
+ @import "./components/index"; 
+ em,
+ i,
+ b {
+     font-style: normal;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     font-style: normal;
+     font-size: inherit;
+ }
+
+ ul,
+ li {
+     list-style: none;
+ }
+
+ table {
+     border: none;
+     border-collapse: collapse;
+     border-spacing: 0;
+ }
+
+ body {
+     font-family: @font-family;
+     font-size: @font-size;
+     color: @main-color;
+ }
+
+ .clr {
+     zoom: 1;
+     &:after {
+         content: " ";
+         display: table;
+         clear: both;
+     }
+ }

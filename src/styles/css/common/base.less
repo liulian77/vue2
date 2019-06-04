@@ -1,0 +1,86 @@
+// Color
+@main-color: #354052; // A1
+@minor-color: #7f8fa4; // A2
+@grey-color: #c5ccd4; // A3
+@icon-color: #ebedf2; // A4
+@white-color: #fff; // A5
+@nav-bg-color: #252e3d; // A6
+@border-color: #dfe2e6; // A7
+@line-color: #f1f2f4; // A8
+@highlight-color: #2198f0; // B1
+@success-color: #44c14a; // B2
+@warning-color: #fb4; // B3
+@deep-purple-color: #8a5bf6; // B4
+@purple-color: #d25ee6; // B5
+@mud-color: #d18b4c; // B6
+@blue-green-color: #00c8dc; // B7
+@green-color: #4ad8ae; // B8
+@error-color: #f04040; // B9
+//base
+@font-family: "微软雅黑";
+@code-family: Arial;
+//size
+@font-size-xl: 18px; // TS1
+@font-size-l: 16px; // TS2
+@font-size: 14px; // TS3
+@font-size-s: 12px; // TS4
+//weight
+@font-lighter: lighter;
+@font-blod: bold;
+//border
+@border-radius: 2px;
+@border-radius-l: 4px;
+//space
+@space-xl: 60px;
+@space-l: 40px;
+@space: 30px;
+@space-s: 25px;
+@space-xs: 20px;
+@space-xxs: 10px;
+//文字样式
+.t1 {
+    font-size: @font-size-xl;
+    font-weight: @font-blod;
+    color: @main-color;
+}
+
+.t2 {
+    font-size: @font-size-l;
+    font-weight: @font-blod;
+    color: @main-color;
+}
+
+.t3 {
+    font-size: @font-size;
+    font-weight: @font-blod;
+    color: @main-color;
+}
+
+.t4 {
+    color: @main-color;
+}
+
+.t5 {
+    color: @minor-color;
+}
+
+.t6 {
+    color: @grey-color;
+}
+
+.t7 {
+    color: @highlight-color;
+}
+
+.t8 {
+    color: @error-color;
+}
+
+.t9 {
+    color: @white-color;
+}
+//行内文字水平垂直居中 
+.line-height(@height){
+    height: @height;
+    line-height: @height;
+}

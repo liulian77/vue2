@@ -1,0 +1,162 @@
+//btn常规样式
+@btn-padding-stretch: 0 16px;
+@btn-height-stretch: 26px;
+@btn-width-default: 100px;
+@btn-width-small: 80px;
+@btn-width-large: 100%;
+@btn-height-default: 36px;
+@btn-height-small: 30px;
+@btn-height-large: 40px;
+.button-color(@color;
+@background;
+@border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+}
+
+.button-style(@width;
+@padding;
+@height) {
+    width: @width;
+    .line-height(@height);
+    padding: @padding;
+}
+
+.button-circle(@height) {
+    border-radius: @height/2;
+}
+
+.btn() {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: @border-radius;
+    white-space: nowrap;
+    .button-color(@main-color;
+    @white-color;
+    @main-color;
+    )
+}
+
+.btn-default() {
+    .button-style(@btn-width-default;
+    0;
+    @btn-height-default);
+}
+
+.btn-small() {
+    .button-style(@btn-width-small;
+    0;
+    @btn-height-small);
+}
+
+.btn-large() {
+    .button-style(@btn-width-large;
+    0;
+    @btn-height-large);
+    font-size: 16px;
+}
+
+.btn-stretch() {
+    .button-style(auto;
+    @btn-padding-stretch;
+    @btn-height-stretch)
+}
+
+//定制样式
+@btn-prefix-cls: ~"s-btn";
+.@{btn-prefix-cls} {
+    .btn;
+    .btn-default;
+    &&-circle {
+        .button-circle(@btn-height-default);
+    }
+    &-default {
+        .button-color(#282829, @white-color, @border-color);
+        &:hover {
+            .button-color(#282829, #f5f6f7, @border-color);
+        }
+        &:active {
+            .button-color(#282829, @border-color, @border-color);
+        }
+    }
+    &-primary {
+        .button-color(@white-color, #2a9ff6, #2a9ff6);
+        &:hover {
+            .button-color(@white-color, #2793e6, #2793e6);
+        }
+        &:active {
+            .button-color(@white-color, #2486d1, #2486d1);
+        }
+    }
+    &-error {
+        .button-color(@white-color, #eb4d44, #eb4d44);
+        &:hover {
+            .button-color(@white-color, #ed3e34, #ed3e34);
+        }
+        &:active {
+            .button-color(@white-color, #ef2b20, #ef2b20);
+        }
+    }
+    &-success {
+        .button-color(@white-color, #44c14a, #44c14a);
+        &:hover {
+            .button-color(@white-color, #32c039, #32c039);
+        }
+        &:active {
+            .button-color(@white-color, #17b01f, #17b01f);
+        }
+    }
+    &-ghost {
+        background: transparent;
+    }
+    &-primary&-ghost {
+        color: #2a9ff6;
+        &:hover {
+            .button-color(#2a9ff6, #e9f5fe, #2a9ff6);
+        }
+        &:active {
+            .button-color(#2a9ff6, #ddf0ff, #2a9ff6);
+        }
+    }
+    &-error&-ghost {
+        color: #eb4d44;
+        &:hover {
+            .button-color(#eb4d44, #fdedec, #eb4d44);
+        }
+        &:active {
+            .button-color(#eb4d44, #fedfdd, #eb4d44);
+        }
+    }
+    &-success&-ghost {
+        color: #44c14a;
+        &:hover {
+            .button-color(#44c14a, #ecf9ed, #44c14a);
+        }
+        &:active {
+            .button-color(#44c14a, #e0ffe2, #44c14a);
+        }
+    }
+    &-stretch {
+        .btn-stretch;
+    }
+    &-stretch&-circle {
+        .button-circle(@btn-height-stretch);
+    }
+    &-small {
+        .btn-small;
+    }
+    &-small&-circle {
+        .button-circle(@btn-height-small);
+    }
+    &-large {
+        .btn-large;
+    }
+    &-large&-circle {
+        .button-circle(@btn-height-large);
+    }
+}
